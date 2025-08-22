@@ -1,4 +1,4 @@
-#WIP GELLO fork for Sapien Simulation and Teleop for Dexmate VEGA
+# WIP GELLO fork for Sapien Simulation and Teleop for Dexmate VEGA
 
 # GELLO: General, Low-Cost, and Intuitive Teleoperation Framework
 
