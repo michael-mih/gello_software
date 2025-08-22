@@ -1,0 +1,200 @@
+<mujoco model="unnamed_model">
+  <compiler angle="radian"/>
+  <default>
+    <default class="/"/>
+    <default class="vega-v1-zed/">
+      <default class="vega-v1-zed/robot">
+        <default class="vega-v1-zed/motor"/>
+        <default class="vega-v1-zed/visual">
+          <geom contype="0" conaffinity="0" group="2" material="vega-v1-zed/visualgeom"/>
+        </default>
+        <default class="vega-v1-zed/collision">
+          <geom contype="0" conaffinity="1" condim="3" group="1" priority="1" material="vega-v1-zed/collision_material" friction="1 0.01 0.01" solref="0.0050000000000000001 1"/>
+          <equality solref="0.0050000000000000001 1" solimp="0.98999999999999999 0.999 1.0000000000000001e-05"/>
+        </default>
+      </default>
+    </default>
+  </default>
+  <asset>
+    <material name="vega-v1-zed/default_material" class="vega-v1-zed/" rgba="0.69999999999999996 0.69999999999999996 0.69999999999999996 1"/>
+    <material name="vega-v1-zed/collision_material" class="vega-v1-zed/" rgba="1 0.28000000000000003 0.10000000000000001 0.90000000000000002"/>
+    <mesh name="vega-v1-zed/torso_l3.obj" class="vega-v1-zed/" file="torso_l3-d9ffbb1e49d8bdcb33ef4c9665563d1c7b2b4f44.obj"/>
+    <mesh name="vega-v1-zed/torso_l3.glb" class="vega-v1-zed/" file="torso_l3-7070942c22209b98025519d20e2e7a1704b4edd3.obj"/>
+    <mesh name="vega-v1-zed/head_l1.obj" class="vega-v1-zed/" file="head_l1-70576507b8fb88bdade1bf53606f07e846ebafbe.obj"/>
+    <mesh name="vega-v1-zed/head_l1.glb" class="vega-v1-zed/" file="head_l1-2c7a16a7076e49c17b96ca8c621486502b58d196.obj"/>
+    <mesh name="vega-v1-zed/head_l2.obj" class="vega-v1-zed/" file="head_l2-565254171f6dea2628df8a0ce47f8ac2618bb251.obj"/>
+    <mesh name="vega-v1-zed/head_l2.glb" class="vega-v1-zed/" file="head_l2-9cbbd12b47c22b50d38afa8fc47956ea4c3598bc.obj"/>
+    <mesh name="vega-v1-zed/head_l3.obj" class="vega-v1-zed/" file="head_l3-b8daaad8602b1722d66ff8b2d96104d93b0242b5.obj"/>
+    <mesh name="vega-v1-zed/head_l3.glb" class="vega-v1-zed/" file="head_l3-e0919a55d65af1015358df3e21e2beffb9554462.obj"/>
+    <mesh name="vega-v1-zed/L_arm_l1.obj" class="vega-v1-zed/" file="L_arm_l1-6666d864e3b37396c7fc6bc482484fd79ad430f3.obj"/>
+    <mesh name="vega-v1-zed/L_arm_l1.glb" class="vega-v1-zed/" file="L_arm_l1-48fb69fe5fcc7891d1161502de523980d09cd287.obj"/>
+    <mesh name="vega-v1-zed/arm_l2.obj" class="vega-v1-zed/" file="arm_l2-4a3232092b6033d33bb68a0ce40021a6ce59f686.obj"/>
+    <mesh name="vega-v1-zed/arm_l2.glb" class="vega-v1-zed/" file="arm_l2-642c3ce47a291f0cdf37c20684c5666b59fed6f6.obj"/>
+    <mesh name="vega-v1-zed/arm_l3.obj" class="vega-v1-zed/" file="arm_l3-300c276d37566012828bb6f3028cc204e8657437.obj"/>
+    <mesh name="vega-v1-zed/arm_l3.glb" class="vega-v1-zed/" file="arm_l3-f00f24ad379320d1064200b2bec64e72845bd6e0.obj"/>
+    <mesh name="vega-v1-zed/arm_l4.obj" class="vega-v1-zed/" file="arm_l4-5e7fb36bc66ce81e15a29032f4c9c165e5bd57f7.obj"/>
+    <mesh name="vega-v1-zed/arm_l4.glb" class="vega-v1-zed/" file="arm_l4-fa6b42667a56429b5ca04c871cffee2a368e9d73.obj"/>
+    <mesh name="vega-v1-zed/arm_l5.obj" class="vega-v1-zed/" file="arm_l5-6870f8371a0bc4482d631e8cb5dec01f27cb22af.obj"/>
+    <mesh name="vega-v1-zed/arm_l5.glb" class="vega-v1-zed/" file="arm_l5-3ffba74e664dde3fadd8af8b4881daa92521f712.obj"/>
+    <mesh name="vega-v1-zed/L_arm_l6.obj" class="vega-v1-zed/" file="L_arm_l6-04935ec4f588efe1484137ddabe8b7cc605c176d.obj"/>
+    <mesh name="vega-v1-zed/L_arm_l6.glb" class="vega-v1-zed/" file="L_arm_l6-c4201246bc5e7b19f924b136dac2bcdc705f4684.obj"/>
+    <mesh name="vega-v1-zed/arm_l7.obj" class="vega-v1-zed/" file="arm_l7-cbba0b4684cf34aa52e8f3648782483b7a17eb54.obj"/>
+    <mesh name="vega-v1-zed/arm_l7.glb" class="vega-v1-zed/" file="arm_l7-7cac82aeb683d7b15c690b2063624d58d5878452.obj"/>
+    <mesh name="vega-v1-zed/arm_l8.obj" class="vega-v1-zed/" file="arm_l8-909bee9c055b21396d63099d8dba80c0e01eabaf.obj"/>
+    <mesh name="vega-v1-zed/arm_l8.glb" class="vega-v1-zed/" file="arm_l8-40e095c6e619faffec25785845b0b6fe2d81db3a.obj"/>
+    <mesh name="vega-v1-zed/R_arm_l1.obj" class="vega-v1-zed/" file="R_arm_l1-d57d2854031b388de6cb14967d4e4491fb93ceca.obj"/>
+    <mesh name="vega-v1-zed/R_arm_l1.glb" class="vega-v1-zed/" file="R_arm_l1-5cae8c6fe6aa9fb6aaf452b8e786bd2920a7e461.obj"/>
+    <mesh name="vega-v1-zed/R_arm_l6.obj" class="vega-v1-zed/" file="R_arm_l6-8912cdb9497d1b3a3932377b46b5c2a29c8bd8f2.obj"/>
+    <mesh name="vega-v1-zed/R_arm_l6.glb" class="vega-v1-zed/" file="R_arm_l6-b69b4658da74253eae765e7771e1f0c4491bf06c.obj"/>
+  </asset>
+  <worldbody>
+    <body name="vega-v1-zed/">
+      <body name="vega-v1-zed/torso_l3" childclass="vega-v1-zed/robot" pos="0 0 0" quat="1 0 0 0">
+        <geom name="vega-v1-zed/torso_l3_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/torso_l3.obj"/>
+        <geom name="vega-v1-zed/torso_l3_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/torso_l3.glb"/>
+        <body name="vega-v1-zed/head_l1" pos="-0.13258 -0.15049999999999999 0.45928000000000002" quat="1 0 0 0">
+          <inertial pos="1.30097e-05 0.072209999999999996 -0.026290000000000001" quat="1 0 0 0" mass="0.21890000000000001" diaginertia="0.00022000000000000001 0.00012 0.00025999999999999998"/>
+          <geom name="vega-v1-zed/head_l1_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/head_l1.obj"/>
+          <geom name="vega-v1-zed/head_l1_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/head_l1.glb"/>
+          <body name="vega-v1-zed/head_l2" pos="0 0.072499999999999995 -0.0035000000000000001" quat="1 0 0 0">
+            <inertial pos="3.5330000000000002e-05 0.01618 0.033890000000000003" quat="1 0 0 0" mass="0.21704000000000001" diaginertia="0.00019000000000000001 0.00013999999999999999 0.00018000000000000001"/>
+            <geom name="vega-v1-zed/head_l2_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/head_l2.obj"/>
+            <geom name="vega-v1-zed/head_l2_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/head_l2.glb"/>
+            <body name="vega-v1-zed/head_l3" pos="0 0.002 0.049500000000000002" quat="1 0 0 0">
+              <inertial pos="0.0081600000000000006 -0.00315 0.037449999999999997" quat="1 0 0 0" mass="0.22599" diaginertia="0.00029 0.00012 0.00027999999999999998"/>
+              <geom name="vega-v1-zed/head_l3_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/head_l3.obj"/>
+              <geom name="vega-v1-zed/head_l3_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/head_l3.glb"/>
+            </body>
+          </body>
+        </body>
+        <body name="vega-v1-zed/L_arm_l1" pos="-0.059080000000000001 0.09146 0.44528000000000001" quat="1 0 0 0">
+          <joint name="vega-v1-zed/L_arm_j1" class="vega-v1-zed/motor" type="hinge" axis="0 1 0" range="-3.1400000000000001 3.1400000000000001" ref="0"/>
+          <inertial pos="0.028500000000000001 0.05287 0.0057600000000000004" quat="1 0 0 0" mass="0.24689" diaginertia="0.00019000000000000001 0.00022000000000000001 0.00033"/>
+          <geom name="vega-v1-zed/L_arm_l1_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/L_arm_l1.obj"/>
+          <geom name="vega-v1-zed/L_arm_l1_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/L_arm_l1.glb"/>
+          <body name="vega-v1-zed/L_arm_l2" pos="0.040000000000000001 0.059999999999999998 0.045400000000000003" quat="1 0 0 0">
+            <joint name="vega-v1-zed/L_arm_j2" class="vega-v1-zed/motor" type="hinge" axis="0 0 1" range="-0.52200000000000002 1.6180000000000001" ref="0"/>
+            <inertial pos="0.081939999999999999 -1.4546799999999999e-06 -0.040579999999999998" quat="1 0 0 0" mass="0.17057" diaginertia="0.00016000000000000001 0.00035 0.00040000000000000002"/>
+            <geom name="vega-v1-zed/L_arm_l2_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l2.obj"/>
+            <geom name="vega-v1-zed/L_arm_l2_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l2.glb"/>
+            <body name="vega-v1-zed/L_arm_l3" pos="0.16439999999999999 0 -0.042999999999999997" quat="1 0 0 0">
+              <joint name="vega-v1-zed/L_arm_j3" class="vega-v1-zed/motor" type="hinge" axis="1 0 0" range="-3.1400000000000001 3.1400000000000001" ref="0"/>
+              <inertial pos="0.079780000000000004 0.0040299999999999997 0.039800000000000002" quat="1 0 0 0" mass="0.22989999999999999" diaginertia="0.00019000000000000001 0.00038000000000000002 0.00025000000000000001"/>
+              <geom name="vega-v1-zed/L_arm_l3_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l3.obj"/>
+              <geom name="vega-v1-zed/L_arm_l3_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l3.glb"/>
+              <body name="vega-v1-zed/L_arm_l4" pos="0.113 0.043299999999999998 0.059999999999999998" quat="1 0 0 0">
+                <joint name="vega-v1-zed/L_arm_j4" class="vega-v1-zed/motor" type="hinge" axis="0 1 0" range="-3.1400000000000001 0.313" ref="0"/>
+                <inertial pos="0.092189999999999994 -0.037909999999999999 -0.029530000000000001" quat="1 0 0 0" mass="0.28334999999999999" diaginertia="0.00025000000000000001 0.00064999999999999997 0.00055000000000000003"/>
+                <geom name="vega-v1-zed/L_arm_l4_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l4.obj"/>
+                <geom name="vega-v1-zed/L_arm_l4_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l4.glb"/>
+                <body name="vega-v1-zed/L_arm_l5" pos="0.1938 -0.043400000000000001 -0.040000000000000001" quat="1 0 0 0">
+                  <joint name="vega-v1-zed/L_arm_j5" class="vega-v1-zed/motor" type="hinge" axis="1 0 0" range="-3.1400000000000001 3.1400000000000001" ref="0"/>
+                  <inertial pos="0.06497 -0.00266 1.2002699999999999e-05" quat="1 0 0 0" mass="0.21021000000000001" diaginertia="0.00011 0.00013999999999999999 0.00013999999999999999"/>
+                  <geom name="vega-v1-zed/L_arm_l5_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l5.obj"/>
+                  <geom name="vega-v1-zed/L_arm_l5_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l5.glb"/>
+                  <body name="vega-v1-zed/L_arm_l6" pos="0.076200000000000004 0.031899999999999998 0" quat="1 0 0 0">
+                    <joint name="vega-v1-zed/L_arm_j6" class="vega-v1-zed/motor" type="hinge" axis="0 1 0" range="-1.462 1.462" ref="0"/>
+                    <inertial pos="0.055259999999999997 -0.02615 -0.0026700000000000001" quat="1 0 0 0" mass="0.20526" diaginertia="0.00011 0.00014999999999999999 0.00013999999999999999"/>
+                    <geom name="vega-v1-zed/L_arm_l6_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/L_arm_l6.obj"/>
+                    <geom name="vega-v1-zed/L_arm_l6_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/L_arm_l6.glb"/>
+                    <body name="vega-v1-zed/L_arm_l7" pos="0.065000000000000002 -0.032000000000000001 0.031899999999999998" quat="1 0 0 0">
+                      <joint name="vega-v1-zed/L_arm_j7" class="vega-v1-zed/motor" type="hinge" axis="0 0 1" range="-1.444 1.1830000000000001" ref="0"/>
+                      <inertial pos="0.032000000000000001 5.4837599999999998e-05 -0.017860000000000001" quat="1 0 0 0" mass="0.062960000000000002" diaginertia="3.8597499999999998e-05 4.0247000000000003e-05 5.8418599999999997e-05"/>
+                      <geom name="vega-v1-zed/L_arm_l7_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l7.obj"/>
+                      <geom name="vega-v1-zed/L_arm_l7_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l7.glb"/>
+                      <body name="vega-v1-zed/L_arm_l8" pos="0.11597 0 -0.032000000000000001" quat="1 0 0 0">
+                        <inertial pos="-0.017819999999999999 -0.00021000000000000001 0.00027" quat="1 0 0 0" mass="0.074310000000000001" diaginertia="3.4244600000000001e-05 2.12153e-05 2.1021399999999998e-05"/>
+                        <geom name="vega-v1-zed/L_arm_l8_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l8.obj"/>
+                        <geom name="vega-v1-zed/L_arm_l8_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l8.glb"/>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="vega-v1-zed/R_arm_l1" pos="-0.059080000000000001 -0.24746000000000001 0.44528000000000001" quat="1 0 0 0">
+          <inertial pos="0.028330000000000001 -0.050000000000000003 0.0054000000000000003" quat="1 0 0 0" mass="0.26324999999999998" diaginertia="0.00027 0.00024000000000000001 0.00042999999999999999"/>
+          <geom name="vega-v1-zed/R_arm_l1_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/R_arm_l1.obj"/>
+          <geom name="vega-v1-zed/R_arm_l1_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/R_arm_l1.glb"/>
+          <body name="vega-v1-zed/R_arm_l2" pos="0.040000000000000001 -0.059999999999999998 0.045400000000000003" quat="1 0 0 0">
+            <inertial pos="0.087489999999999998 -1.34526e-06 -0.041349999999999998" quat="1 0 0 0" mass="0.18345" diaginertia="0.00017000000000000001 0.00036000000000000002 0.00040999999999999999"/>
+            <geom name="vega-v1-zed/R_arm_l2_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l2.obj"/>
+            <geom name="vega-v1-zed/R_arm_l2_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l2.glb"/>
+            <body name="vega-v1-zed/R_arm_l3" pos="0.16439999999999999 0 -0.042999999999999997" quat="1 0 0 0">
+              <inertial pos="0.081269999999999995 0.0041399999999999996 0.040529999999999997" quat="1 0 0 0" mass="0.22384000000000001" diaginertia="0.00019000000000000001 0.00038000000000000002 0.00025000000000000001"/>
+              <geom name="vega-v1-zed/R_arm_l3_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l3.obj"/>
+              <geom name="vega-v1-zed/R_arm_l3_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l3.glb"/>
+              <body name="vega-v1-zed/R_arm_l4" pos="0.113 0.043299999999999998 0.059999999999999998" quat="1 0 0 0">
+                <inertial pos="0.077280000000000001 -0.037359999999999997 -0.029059999999999999" quat="1 0 0 0" mass="0.25608999999999998" diaginertia="0.00027 0.00064999999999999997 0.00055000000000000003"/>
+                <geom name="vega-v1-zed/R_arm_l4_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l4.obj"/>
+                <geom name="vega-v1-zed/R_arm_l4_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l4.glb"/>
+                <body name="vega-v1-zed/R_arm_l5" pos="0.1938 -0.043400000000000001 -0.040000000000000001" quat="1 0 0 0">
+                  <inertial pos="0.064570000000000002 0.0025000000000000001 -1.30383e-05" quat="1 0 0 0" mass="0.21223" diaginertia="0.00011 0.00013999999999999999 0.00013999999999999999"/>
+                  <geom name="vega-v1-zed/R_arm_l5_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1.3267948966775328e-06 0.99999999999911982 0 0" mesh="vega-v1-zed/arm_l5.obj"/>
+                  <geom name="vega-v1-zed/R_arm_l5_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1.3267948966775328e-06 0.99999999999911982 0 0" mesh="vega-v1-zed/arm_l5.glb"/>
+                  <body name="vega-v1-zed/R_arm_l6" pos="0.076200000000000004 -0.031899999999999998 0" quat="1 0 0 0">
+                    <inertial pos="0.05525 0.02614 -0.0026700000000000001" quat="1 0 0 0" mass="0.20508000000000001" diaginertia="0.00011 0.00014999999999999999 0.00013999999999999999"/>
+                    <geom name="vega-v1-zed/R_arm_l6_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/R_arm_l6.obj"/>
+                    <geom name="vega-v1-zed/R_arm_l6_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/R_arm_l6.glb"/>
+                    <body name="vega-v1-zed/R_arm_l7" pos="0.065000000000000002 0.032000000000000001 0.031899999999999998" quat="1 0 0 0">
+                      <inertial pos="0.03048 5.1173600000000001e-05 -0.017090000000000001" quat="1 0 0 0" mass="0.067309999999999995" diaginertia="4.1457800000000001e-05 4.6754600000000001e-05 6.5117700000000002e-05"/>
+                      <geom name="vega-v1-zed/R_arm_l7_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l7.obj"/>
+                      <geom name="vega-v1-zed/R_arm_l7_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l7.glb"/>
+                      <body name="vega-v1-zed/R_arm_l8" pos="0.11597 0 -0.032000000000000001" quat="1 0 0 0">
+                        <inertial pos="-0.017819999999999999 1.03176e-06 0.00027" quat="1 0 0 0" mass="0.074310000000000001" diaginertia="3.4244600000000001e-05 2.12153e-05 2.1021399999999998e-05"/>
+                        <geom name="vega-v1-zed/R_arm_l8_collision" class="vega-v1-zed/collision" type="mesh" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l8.obj"/>
+                        <geom name="vega-v1-zed/R_arm_l8_visual" class="vega-v1-zed/visual" type="mesh" material="vega-v1-zed/default_material" pos="0 0 0" quat="1 0 0 0" mesh="vega-v1-zed/arm_l8.glb"/>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <site name="vega-v1-zed/torso_l3_site" pos="0 0 0" quat="1 0 0 0"/>
+        <camera name="vega-v1-zed/front_camera" mode="track" fovy="90" pos="0 2 0.5" quat="4.329780281177467e-17 4.3297802811774658e-17 0.70710678118654746 0.70710678118654757"/>
+        <camera name="vega-v1-zed/side_camera" mode="track" fovy="90" pos="-2 0 0.5" quat="-0.5 -0.49999999999999989 0.5 0.50000000000000011"/>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude name="vega-v1-zed//unnamed_contact_0" body1="vega-v1-zed/torso_l3" body2="vega-v1-zed/head_l1"/>
+    <exclude name="vega-v1-zed//unnamed_contact_1" body1="vega-v1-zed/head_l1" body2="vega-v1-zed/head_l2"/>
+    <exclude name="vega-v1-zed//unnamed_contact_2" body1="vega-v1-zed/head_l2" body2="vega-v1-zed/head_l3"/>
+    <exclude name="vega-v1-zed//unnamed_contact_3" body1="vega-v1-zed/torso_l3" body2="vega-v1-zed/L_arm_l1"/>
+    <exclude name="vega-v1-zed//unnamed_contact_4" body1="vega-v1-zed/L_arm_l1" body2="vega-v1-zed/L_arm_l2"/>
+    <exclude name="vega-v1-zed//unnamed_contact_5" body1="vega-v1-zed/L_arm_l2" body2="vega-v1-zed/L_arm_l3"/>
+    <exclude name="vega-v1-zed//unnamed_contact_6" body1="vega-v1-zed/L_arm_l3" body2="vega-v1-zed/L_arm_l4"/>
+    <exclude name="vega-v1-zed//unnamed_contact_7" body1="vega-v1-zed/L_arm_l4" body2="vega-v1-zed/L_arm_l5"/>
+    <exclude name="vega-v1-zed//unnamed_contact_8" body1="vega-v1-zed/L_arm_l5" body2="vega-v1-zed/L_arm_l6"/>
+    <exclude name="vega-v1-zed//unnamed_contact_9" body1="vega-v1-zed/L_arm_l6" body2="vega-v1-zed/L_arm_l7"/>
+    <exclude name="vega-v1-zed//unnamed_contact_10" body1="vega-v1-zed/L_arm_l7" body2="vega-v1-zed/L_arm_l8"/>
+    <exclude name="vega-v1-zed//unnamed_contact_11" body1="vega-v1-zed/torso_l3" body2="vega-v1-zed/R_arm_l1"/>
+    <exclude name="vega-v1-zed//unnamed_contact_12" body1="vega-v1-zed/R_arm_l1" body2="vega-v1-zed/R_arm_l2"/>
+    <exclude name="vega-v1-zed//unnamed_contact_13" body1="vega-v1-zed/R_arm_l2" body2="vega-v1-zed/R_arm_l3"/>
+    <exclude name="vega-v1-zed//unnamed_contact_14" body1="vega-v1-zed/R_arm_l3" body2="vega-v1-zed/R_arm_l4"/>
+    <exclude name="vega-v1-zed//unnamed_contact_15" body1="vega-v1-zed/R_arm_l4" body2="vega-v1-zed/R_arm_l5"/>
+    <exclude name="vega-v1-zed//unnamed_contact_16" body1="vega-v1-zed/R_arm_l5" body2="vega-v1-zed/R_arm_l6"/>
+    <exclude name="vega-v1-zed//unnamed_contact_17" body1="vega-v1-zed/R_arm_l6" body2="vega-v1-zed/R_arm_l7"/>
+    <exclude name="vega-v1-zed//unnamed_contact_18" body1="vega-v1-zed/R_arm_l7" body2="vega-v1-zed/R_arm_l8"/>
+  </contact>
+  <actuator>
+    <general name="vega-v1-zed/L_arm_j1_ctrl" class="vega-v1-zed/motor" joint="vega-v1-zed/L_arm_j1"/>
+    <general name="vega-v1-zed/L_arm_j2_ctrl" class="vega-v1-zed/motor" joint="vega-v1-zed/L_arm_j2"/>
+    <general name="vega-v1-zed/L_arm_j3_ctrl" class="vega-v1-zed/motor" joint="vega-v1-zed/L_arm_j3"/>
+    <general name="vega-v1-zed/L_arm_j4_ctrl" class="vega-v1-zed/motor" joint="vega-v1-zed/L_arm_j4"/>
+    <general name="vega-v1-zed/L_arm_j5_ctrl" class="vega-v1-zed/motor" joint="vega-v1-zed/L_arm_j5"/>
+    <general name="vega-v1-zed/L_arm_j6_ctrl" class="vega-v1-zed/motor" joint="vega-v1-zed/L_arm_j6"/>
+    <general name="vega-v1-zed/L_arm_j7_ctrl" class="vega-v1-zed/motor" joint="vega-v1-zed/L_arm_j7"/>
+  </actuator>
+  <sensor>
+    <framepos name="vega-v1-zed/torso_l3_site_pos" objtype="site" objname="vega-v1-zed/torso_l3_site"/>
+    <framequat name="vega-v1-zed/torso_l3_site_quat" objtype="site" objname="vega-v1-zed/torso_l3_site"/>
+    <framelinvel name="vega-v1-zed/torso_l3_site_linvel" objtype="site" objname="vega-v1-zed/torso_l3_site"/>
+    <frameangvel name="vega-v1-zed/torso_l3_site_angvel" objtype="site" objname="vega-v1-zed/torso_l3_site"/>
+    <velocimeter name="vega-v1-zed/torso_l3_site_vel" site="vega-v1-zed/torso_l3_site"/>
+  </sensor>
+</mujoco>

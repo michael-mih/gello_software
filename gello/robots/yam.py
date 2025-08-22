@@ -83,7 +83,7 @@ class YAMRobot(Robot):
             # Pad with zeros if we have fewer than 7 joints
             target_pos = np.pad(target_pos, (0, 7 - len(target_pos)), "constant")
         self.robot.command_joint_pos(np.array(target_pos))
-
+    
 
 def main():
     robot = YAMRobot()

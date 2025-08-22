@@ -1,0 +1,28 @@
+robot:
+  _target_: gello.robots.sapien_sim_robot.SapienRobotServer
+  urdf_path: "dexmate/vega-urdf/vega_no_effector.urdf"
+  gripper_urdf_path: null
+  host: "127.0.0.1"
+  port: 6001
+     
+agent:
+  _target_: gello.agents.gello_agent.GelloAgent
+  port: "/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTAAMOII-if00-port0"
+  dynamixel_config:
+    _target_: gello.agents.gello_agent.DynamixelRobotConfig
+    joint_ids: [1, 2, 3, 4, 5, 6, 7]
+    joint_offsets: [
+      -1.57, #3.14,
+      1.57, #-1.57,
+      0,
+      -0.3, #adjusted for collision,
+      -3.14,
+      0, #-1.57,
+       3.14
+    ]
+    joint_signs: [1, 1, 1, 1, 1, 1, 1]
+    gripper_config: null
+  start_joints: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+hz: 60
+

@@ -1,0 +1,1 @@
+python experiments/launch_yaml.py --left-config-path configs/sapien_dexmate.yaml

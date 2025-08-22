@@ -35,3 +35,10 @@ ros2/log/
 
 # robot packages
 third_party/i2rt/
+
+#dexmate urdfs
+dexmate/
+
+dexcontrol/
+
+TEST*
