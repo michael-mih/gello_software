@@ -12,15 +12,15 @@ agent:
     _target_: gello.agents.gello_agent.DynamixelRobotConfig
     joint_ids: [1, 2, 3, 4, 5, 6, 7]
     joint_offsets: [
-      -1.57, #3.14,
-      1.57, #-1.57,
+      -1.57,
+      0, #1.57,
       0,
-      -0.3, #adjusted for collision,
+      0, #-1.57, 
       -3.14,
-      0, #-1.57,
+      0,
        3.14
     ]
-    joint_signs: [1, 1, 1, 1, 1, 1, 1]
+    joint_signs: [1, 1, 1, 1, 1, 1, -1]
     gripper_config: null
   start_joints: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 

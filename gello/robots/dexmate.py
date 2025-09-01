@@ -6,7 +6,6 @@ import numpy as np
 
 import numpy as np
 import tyro
-from base_arm_teleop import BaseArmTeleopNode, BaseIKController
 from loguru import logger
 
 from dexcontrol.utils.rate_limiter import RateLimiter
@@ -18,7 +17,7 @@ from dexcontrol import Robot as DexcontrolRobot
 #TODO why does the docs refer to the follower as leader?
 
 class DexmateRobot(GelloRobot):
-    def init(self):
+    def __init__(self):
         
         self._num_joints = 7
     
@@ -36,6 +35,7 @@ class DexmateRobot(GelloRobot):
 
     def get_joint_state(self) -> np.ndarray:
         self._joint_state = np.array(self._arm.get_joint_pos())
+        print(self._joint_state)
         return self._joint_state
     
     def command_joint_state(self, joint_state: np.ndarray) -> None:
@@ -62,8 +62,8 @@ class DexmateRobot(GelloRobot):
 
 
     def get_observations(self) -> Dict[str, np.ndarray]:
-        joint_positions = np.array(self._arm.get_joint_pos_dict())
-        joint_velocities = np.array(self._arm.get_joint_vel_dict())
+        joint_positions = np.array(self._arm.get_joint_pos())
+        joint_velocities = np.array(self._arm.get_joint_vel())
 
         
 
@@ -72,5 +72,7 @@ class DexmateRobot(GelloRobot):
             "joint_velocities": joint_velocities,
             #"ee_pos_quat": np.concatenate([ee_pos, ee_quat]), #TODO: FK? dexmotion motionplanner? 
             #"gripper_position": gripper_pos, #TODO opened or closed? need to connect robotiq gripper
+            "ee_pos_quat": np.zeros(7), #TODO: FK? dexmotion motionplanner?
+            "gripper_position": np.array([0]) #TODO opened or closed? need to connect rob
         }
     

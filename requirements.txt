@@ -1,7 +1,9 @@
 # keep in alphabetical order
 dexcontrol
+dexmotion
 dextop
 dm_control
+ompl
 omegaconf==2.3.0
 Pillow
 pygame

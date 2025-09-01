@@ -39,6 +39,9 @@ third_party/i2rt/
 #dexmate urdfs
 dexmate/
 
+#dexmate certs
+robopil_certs.zip
+
 dexcontrol/
 
 TEST*

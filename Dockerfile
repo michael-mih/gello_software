@@ -12,6 +12,8 @@ RUN apt update && apt install -y \
     vulkan-tools \
     mesa-vulkan-drivers \
     python3-pip \
+    ssh \
+    ninja-build \
     android-tools-adb \
     libegl1-mesa-dev && \
     rm -rf /var/lib/apt/lists/* 

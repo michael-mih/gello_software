@@ -10,27 +10,7 @@ from gello.robots.robot import Robot
 
 class SapienRobotServer(Robot):
 
-    def __init__(self, urdf_path: str,
-                 gripper_urdf_path: Optional[str] = None, 
-                 host: str = "127.0.0.1",
-                 port: int = 5556,
-                 print_joints: bool = False
-                 ):
-        
-        self._scene = sapien.Scene()
-        self._scene.add_ground(-0.1)
-
-        self._scene.set_ambient_light([0.5, 0.5, 0.5])
-        self._scene.add_directional_light([0, 1, -1], [0.5, 0.5, 0.5])
-
-        loader = self._scene.create_urdf_loader()
-        loader.fix_root_link = True
-        loader.load_multiple_collisions_from_file = True
-        self._robot_sapien = loader.load(urdf_path)
-        #self._robot_pinocchio = self._robot_sapien.create_pinocchio_model()
-        #self._link_idx_dict = {}
-        #self._joint_idx_dict = {}
-        
+    def vega_setup(self) -> None:
         for link_idx, link in enumerate(self._robot_sapien.get_links()):
                 if(link.name == "L_arm_l8"):
                     self._eef_idx = link_idx
@@ -53,14 +33,41 @@ class SapienRobotServer(Robot):
                         stiffness=4000, damping=500, force_limit=1000, mode="force"
                     )
 
+    
+    def __init__(self, urdf_path: str,
+                 gripper_urdf_path: Optional[str] = None, 
+                 host: str = "127.0.0.1",
+                 port: int = 5556,
+                 print_joints: bool = False
+                 ):
+        
+        self._scene = sapien.Scene()
+        self._scene.add_ground(-0.1)
+
+        self._scene.set_ambient_light([0.5, 0.5, 0.5])
+        self._scene.add_directional_light([0, 1, -1], [0.5, 0.5, 0.5])
+
+        loader = self._scene.create_urdf_loader()
+        loader.fix_root_link = True
+        loader.load_multiple_collisions_from_file = True
+        self._robot_sapien = loader.load(urdf_path)
+        #self._robot_pinocchio = self._robot_sapien.create_pinocchio_model()
+        #self._link_idx_dict = {}
+        #self._joint_idx_dict = {}
+        
+
+        ##Any unique robot setup (collisions, drive properties, etc) setup here
+        self.vega_setup()
+
         self._zmq_server = ZMQRobotServer(robot=self, host=host, port=port)
         self._zmq_server_thread = ZMQServerThread(self._zmq_server)
         
-        self._left_arm_idx = [10, 13, 16, 18, 20, 22, 24]
+        
+        #Assuming you are teleoperating just a part of the robot (ex. arm) list the relevant joints in order.
+        left_arm_idx = [10, 13, 16, 18, 20, 22, 24]
         #right_idx = [11, 14, 17, 19, 21, 23, 25]
 
-        #change for applicable joints
-        self._active_idx = self._left_arm_idx
+        self._active_idx = left_arm_idx
         
         self._active_joints = self._robot_sapien.get_active_joints()
 
@@ -109,7 +116,7 @@ class SapienRobotServer(Robot):
         Returns:
             Dict[str, np.ndarray]: A dictionary of observations.
         """
-        #only pull relevant arm joints
+        #only pull relevant joints
         joint_positions = np.array([self._robot_sapien.get_qpos()[i] for i in self._active_idx])
         joint_velocities = np.array([self._robot_sapien.get_qvel()[i] for i in self._active_idx])
         
