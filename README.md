@@ -28,6 +28,23 @@ Install [Docker](https://docs.docker.com/engine/install/ubuntu/), then:
 docker build . -t gello:latest
 python scripts/launch_with_X11.py
 ```
+## Usage (VEGA)
+On robot:
+```bash
+dextop node start
+```
+On client:
+```bash
+// ask your admin to get the communication certificates
+dextop cert unpack <certificate_file>.zip  
+dextop cfg gen
+export ROBOT_NAME=<the robot name>
+```
+For simulation or real-world, run each respectively:
+```bash
+python experiments/launch_yaml.py --left-config-path configs/sapien_dexmate.yaml 
+python experiments/launch_yaml.py --left-config-path configs/dexmate.yaml 
+```
 
 ## Adding New Robots
 
@@ -47,7 +64,7 @@ See existing implementations in `gello/robots/` for reference:
 - `dexmate.py` - VEGA robot
 - `sapien_sim_robot.py`- robot simulated in SAPIEN (VEGA by default)
 
-#### 2. Create Custom YAML Configurations
+#### Create Custom YAML Configurations
 1. Copy an existing config from `configs/` as a template.
 2. Modify the robot `_target_` and parameters for your setup:
    - For hardware: `gello.robots.ur.URRobot`, `gello.robots.panda.PandaRobot`, etc.
@@ -58,23 +75,6 @@ See existing implementations in `gello/robots/` for reference:
    - `joint_signs`: Based on your robot type
    - `start_joints`: Your GELLO's starting position
 
-## Usage (VEGA)
-On robot:
-```bash
-dextop node start
-```
-On client:
-```bash
-// ask your admin to get the communication certificates
-dextop cert unpack <certificate_file>.zip  
-dextop cfg gen
-export ROBOT_NAME=<the robot name>
-```
-For simulation or real-world, run each respectively:
-```bash
-python experiments/launch_yaml.py --left-config-path configs/sapien_dexmate.yaml 
-python experiments/launch_yaml.py --left-config-path configs/dexmate.yaml 
-```
 ### Troubleshooting
 
 If, when you run `generate_yam_config.py`, you get an error detecting offsets, you may need to add your user to the dialout user group. To do so, run:
