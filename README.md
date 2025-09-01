@@ -77,54 +77,7 @@ See existing implementations in `gello/robots/` for reference:
 
 ### Troubleshooting
 
-If, when you run `generate_yam_config.py`, you get an error detecting offsets, you may need to add your user to the dialout user group. To do so, run:
-`sudo usermod -aG dialout $USER`
-And then log out and log back in or restart your computer.s
-
 If some joints in your arm are not behaving as expected, you may need to modify the joint signs of your configuration. Simply invert the affected joint sign(s) in your .yaml or `gello_agent.py` or physically reverse the installation of the servo.
-
-### Optional: Starting Configuration
-
-Use `--start-joints` to specify GELLO's starting configuration for automatic robot reset:
-```bash
-python experiments/run_env.py --agent=gello --start-joints <joint_angles>
-```
-
-## Advanced Features
-
-### Data Collection
-
-Collect teleoperation demonstrations with keyboard controls.
-
-For the YAM arm launched with `launch_yaml.py`, you can append the flag `--use-save-interface` to enable data saving. This is the recommended method.
-
-```
-python experiments/launch_yaml.py --left-config-path configs/yam_passive.yaml --use-save-interface
-```
-After launching, you can begin saving with `s` and stop saving with `q`. Data saved will be in the `data` directory in the root of the project.
-
-For non-YAM setups, use the following:
-```bash
-python experiments/run_env.py --agent=gello --use-save-interface
-```
-Process collected data:
-```bash
-python gello/data_utils/demo_to_gdict.py --source-dir=<source_dir>
-```
-
-### Bimanual Operation
-
-The recommended way to use bimanual mode is with `launch_yaml.py`. Pass a config file for the right arm to `--right-config-path`.
-
-```
-python experiments/launch_yaml.py --left-config-path configs/gello_1.yaml --right-config-path configs/gello_2.yaml
-```
-
-For non-YAM setups, use:
-```bash
-python experiments/launch_nodes.py --robot=bimanual_ur
-python experiments/run_env.py --agent=gello --bimanual
-```
 
 ## Development
 
