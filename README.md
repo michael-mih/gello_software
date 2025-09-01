@@ -29,20 +29,6 @@ docker build . -t gello:latest
 python scripts/launch_with_X11.py
 ```
 
-
-### YAML Configuration System
-
-This fork has premade configurations for the dexmate VEGA in both simulation and real-world use. see `configs/`.
-
-
-#### Configuration Components
-
-- **Robot Config**: Defines robot type, communication parameters, and physical settings.
-- **Agent Config**: Defines GELLO device settings, joint mappings, and calibration.
-- **DynamixelRobotConfig**: Motor-specific settings including IDs, offsets, signs, and gripper.
-- **Control Parameters**: Update rates (`hz`), step limits (`max_steps`), and safety settings.
-
-
 ## Adding New Robots
 
 To integrate a new robot to the Python configs:
@@ -51,13 +37,17 @@ To integrate a new robot to the Python configs:
 2. **Implement Robot Interface**: Create a new class implementing the `Robot` protocol from `gello/robots/robot.py`
 3. **Add Configuration**: Update the configuration system with your robot's parameters
 
+#### Configuration Components
+
+- **Robot Config**: Defines robot type, communication parameters, and physical settings.
+- **Agent Config**: Defines GELLO device settings, joint mappings, and calibration.
+- **DynamixelRobotConfig**: Motor-specific settings including IDs, offsets, signs, and gripper.
+- **Control Parameters**: Update rates (`hz`), step limits (`max_steps`), and safety settings.
 See existing implementations in `gello/robots/` for reference:
 - `dexmate.py` - VEGA robot
 - `sapien_sim_robot.py`- robot simulated in SAPIEN (VEGA by default)
 
-
 #### 2. Create Custom YAML Configurations
-
 1. Copy an existing config from `configs/` as a template.
 2. Modify the robot `_target_` and parameters for your setup:
    - For hardware: `gello.robots.ur.URRobot`, `gello.robots.panda.PandaRobot`, etc.
