@@ -19,6 +19,17 @@ cd gello_software
 
 ## Installation
 
+### ZED SDK and API
+
+If you want to use dexsensor, you will most likely need the ZED SDK.
+Downlaod the version that corresponds with your machine [here](https://www.stereolabs.com/developers/release), then modify the dockerfile accordingly:
+```dockerfile
+# before
+COPY ZED_SDK_Ubuntu22_cuda11.8_tensorrt10.9_v5.0.5.zstd.run /tmp/ZED_SDK.run
+# after
+COPY <YOUR .RUN FILE HERE> /tmp/ZED_SDK.run
+```
+If you do not need dexsensor, you can remove the respective lines in the dockerfile.
 
 ### Docker
 
