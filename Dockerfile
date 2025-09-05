@@ -7,6 +7,7 @@ ENV PYTHONPATH=/gello:/gello/third_party/oculus_reader/
 
 # Group apt updates and installs together
 RUN apt update && apt install -y \
+    libxcb-cursor0 \
     zstd \
     libstdc++6 \
     libhidapi-dev \
