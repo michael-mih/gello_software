@@ -19,6 +19,6 @@ agent:
     ]
     joint_signs: [1, 1, 1, 1, 1, 1, -1]
     gripper_config: null
-  start_joints: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  start_joints: [0.0, 0.0, 0.0, -1.57, 0.0, 0.0, 0.0]
 
-hz: 100 #TODO?
+hz: 500 #TODO?

@@ -25,7 +25,7 @@ class DexmateRobot(GelloRobot):
         self._dexmateBot = DexcontrolRobot()
 
         self._arm = self._dexmateBot.left_arm
-        self._arm.set_mode("position")
+        self._arm.set_modes(["position"]*self._num_joints)
 
 
         self._joint_state = np.zeros(self._num_joints)

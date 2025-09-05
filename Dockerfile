@@ -7,6 +7,8 @@ ENV PYTHONPATH=/gello:/gello/third_party/oculus_reader/
 
 # Group apt updates and installs together
 RUN apt update && apt install -y \
+    zstd \
+    libstdc++6 \
     libhidapi-dev \
     libvulkan1 \
     vulkan-tools \
@@ -18,6 +20,9 @@ RUN apt update && apt install -y \
     libegl1-mesa-dev && \
     rm -rf /var/lib/apt/lists/* 
 
+COPY ZED_SDK_Ubuntu22_cuda11.8_tensorrt10.9_v5.0.5.zstd.run /tmp/ZED_SDK.run
+RUN chmod +x /tmp/ZED_SDK.run
+RUN /tmp/ZED_SDK.run silent
 
 # Python alias setup
 RUN echo "alias python=python3" >> ~/.bashrc

@@ -1,6 +1,7 @@
 # keep in alphabetical order
 dexcontrol
 dexmotion
+dexsensor
 dextop
 dm_control
 ompl

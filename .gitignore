@@ -44,4 +44,6 @@ robopil_certs.zip
 
 dexcontrol/
 
-TEST*
+zed/
+*.run
+*.whl

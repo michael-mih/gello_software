@@ -10,20 +10,20 @@ from gello.robots.robot import Robot
 
 class SapienRobotServer(Robot):
 
+    """Setup independent between robots, such as collision groups and drive properties.
+    Will likely need to modify for your own robot
+    """
     def vega_setup(self) -> None:
         for link_idx, link in enumerate(self._robot_sapien.get_links()):
                 if(link.name == "L_arm_l8"):
                     self._eef_idx = link_idx
-                #self._link_idx_dict[link.name] = link_idx
                 for shape in link.get_collision_shapes():
                     shape.set_collision_groups([1, 1, 17, 0])
         
         #For now no EEF so just end of left arm
-        #self._eef_idx = self._link_idx_dict["L_arm_l8"]
         self._eef_link = self._robot_sapien.get_links()[self._eef_idx]
         
         for joint_idx, joint in enumerate(self._robot_sapien.get_active_joints()):
-                #self._joint_idx_dict[joint.name] = joint_idx
                 if "torso" in joint.name:
                     joint.set_drive_property(
                         stiffness=4000, damping=500, mode="acceleration"
@@ -51,9 +51,7 @@ class SapienRobotServer(Robot):
         loader.fix_root_link = True
         loader.load_multiple_collisions_from_file = True
         self._robot_sapien = loader.load(urdf_path)
-        #self._robot_pinocchio = self._robot_sapien.create_pinocchio_model()
-        #self._link_idx_dict = {}
-        #self._joint_idx_dict = {}
+
         
 
         ##Any unique robot setup (collisions, drive properties, etc) setup here

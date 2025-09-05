@@ -199,6 +199,7 @@ def move_to_start_position(
     bimanual: bool = False,
     left_cfg: Optional[Dict[str, Any]] = None,
     right_cfg: Optional[Dict[str, Any]] = None,
+    agent: Optional[Any] = None
 ):
     """Move robot to start position if specified."""
     if bimanual:
@@ -222,6 +223,8 @@ def move_to_start_position(
         print("Warning: Mismatch in joint shapes, skipping move_to_start_position.")
         return
 
+  
+
     max_delta = (np.abs(curr_joints - reset_joints)).max()
     steps = min(int(max_delta / 0.01), 100)
 
@@ -230,7 +233,15 @@ def move_to_start_position(
         env.step(jnt)
         time.sleep(0.001)
 
-
+    if agent is not None:
+        leader_joints = agent.act(env.get_obs())
+        #follower_joints = env.get_obs()["joint_positions"]
+        while(np.abs(leader_joints - reset_joints).max() > 0.35):
+            leader_joints = agent.act(env.get_obs())
+            #follower_joints = env.get_obs()["joint_positions"]
+            time.sleep(0.001)
+    else:
+        print("No agent provided, skipping synchronization step.")
 def instantiate_from_dict(cfg):
     """Instantiate objects from configuration."""
     if isinstance(cfg, dict) and "_target_" in cfg:

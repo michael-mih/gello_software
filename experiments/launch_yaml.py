@@ -200,9 +200,9 @@ def main():
     from gello.utils.launch_utils import move_to_start_position
 
     if bimanual:
-        move_to_start_position(env, bimanual, left_cfg, right_cfg)
+        move_to_start_position(env, bimanual, left_cfg, right_cfg, agent=agent)
     else:
-        move_to_start_position(env, bimanual, left_cfg)
+        move_to_start_position(env, bimanual, left_cfg, agent=agent)
 
     print(
         f"Launching robot: {robot.__class__.__name__}, agent: {agent.__class__.__name__}"
@@ -219,6 +219,7 @@ def main():
             agent_name=agent.__class__.__name__,
             expand_user=True,
         )
+
 
     # Run main control loop
     run_control_loop(env, agent, save_interface)
