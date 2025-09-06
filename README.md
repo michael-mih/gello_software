@@ -1,4 +1,6 @@
-# WIP GELLO fork for Sapien Simulation and Teleop for Dexmate VEGA
+# GELLO fork for Sapien Simulation and Teleop for Dexmate VEGA
+
+**This fork is still in development! Things might break!**
 
 <p align="center">
   <img src="imgs/title.png" />
@@ -19,6 +21,17 @@ cd gello_software
 
 ## Installation
 
+### ZED SDK and API
+
+If you want to use dexsensor, you will most likely need the ZED SDK.
+Downlaod the version that corresponds with your machine [here](https://www.stereolabs.com/developers/release), then modify the dockerfile accordingly:
+```dockerfile
+# before
+COPY ZED_SDK_Ubuntu22_cuda11.8_tensorrt10.9_v5.0.5.zstd.run /tmp/ZED_SDK.run
+# after
+COPY <YOUR .RUN FILE HERE> /tmp/ZED_SDK.run
+```
+If you do not need dexsensor, you can remove the respective lines in the dockerfile.
 
 ### Docker
 
@@ -45,6 +58,8 @@ For simulation or real-world, run each respectively:
 python experiments/launch_yaml.py --left-config-path configs/sapien_dexmate.yaml 
 python experiments/launch_yaml.py --left-config-path configs/dexmate.yaml 
 ```
+
+Teleop only begins once the leader's joints are within a tolerable range of the follower's starting joint positions.
 
 ## Adding New Robots
 
