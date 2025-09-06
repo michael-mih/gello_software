@@ -238,6 +238,8 @@ def move_to_start_position(
         #follower_joints = env.get_obs()["joint_positions"]
         while(np.abs(leader_joints - reset_joints).max() > 0.35):
             leader_joints = agent.act(env.get_obs())
+            leader_str = " ".join([f"{j: 6.2f}" for j in leader_joints])
+            print(f"Leader joints: [{leader_str}]", end="\r")
             #follower_joints = env.get_obs()["joint_positions"]
             time.sleep(0.001)
     else:
