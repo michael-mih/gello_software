@@ -1,4 +1,6 @@
-# WIP GELLO fork for Sapien Simulation and Teleop for Dexmate VEGA
+# GELLO fork for Sapien Simulation and Teleop for Dexmate VEGA
+
+**This fork is still in development! Things might break!**
 
 <p align="center">
   <img src="imgs/title.png" />
@@ -56,6 +58,8 @@ For simulation or real-world, run each respectively:
 python experiments/launch_yaml.py --left-config-path configs/sapien_dexmate.yaml 
 python experiments/launch_yaml.py --left-config-path configs/dexmate.yaml 
 ```
+
+Teleop only begins once the leader's joints are within a tolerable range of the follower's starting joint positions.
 
 ## Adding New Robots
 
